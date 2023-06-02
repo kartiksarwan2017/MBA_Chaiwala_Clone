@@ -75,20 +75,6 @@ function App() {
     btnColor = {yellow}
     /> 
 
-
-    {/* Ted Talks */}
-    <Section 
-    h3 = {tedTalks.heading} 
-    text = {tedTalks.text} 
-    btnTxt = {tedTalks.btn} 
-    imgSrc = {tedTalksImg}  
-    backgroundColor = {yellow}
-    headingColor = {pink}
-    textColor = {pink}
-    btnBgColor = {pink}
-    btnColor = {yellow}
-    /> 
-
     {/* Franchise */}
     <Section 
     h3 = {franchise.heading} 
