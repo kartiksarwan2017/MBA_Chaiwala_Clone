@@ -1,5 +1,8 @@
+import "./styles/mediaQuery.scss";
 import "./styles/App.scss";
+
 import data from "./data/data.json";
+
 import IntroVideo from "./components/IntroVideo/IntroVideo";
 import Section from "./components/Section/Section";
 import Footer from "./components/Footer/Footer";
@@ -14,9 +17,7 @@ import albumImg from "./assets/mba-cares.gif";
 import baratImg from "./assets/image1.png";
 import chaiWalaImg from "./assets/image3.png";
 
-
 const yellow = "#fff100", pink = "#ed1e79", red = "#d20120", white = "#fff", brown = "#6d3d0f";
-
 
 function App() {
 
