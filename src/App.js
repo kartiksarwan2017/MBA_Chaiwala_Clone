@@ -2,6 +2,8 @@ import "./styles/App.scss";
 import data from "./data/data.json";
 import IntroVideo from "./components/IntroVideo/IntroVideo";
 import Section from "./components/Section/Section";
+import Footer from "./components/Footer/Footer";
+
 import freshTopicImg from "./assets/academy.png";
 import freshTopic2Img from "./assets/story.png";
 import tedTalksImg from "./assets/in-the-news.gif";
@@ -156,6 +158,9 @@ function App() {
     btnBgColor = {brown}
     btnColor = {yellow}
     />
+
+    {/* Footer */}
+    <Footer />
     </>
   );
 }
