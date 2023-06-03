@@ -3,6 +3,7 @@ import data from "./data/data.json";
 import IntroVideo from "./components/IntroVideo/IntroVideo";
 import Section from "./components/Section/Section";
 import Footer from "./components/Footer/Footer";
+import Misc from "./components/Misc/Misc";
 
 import freshTopicImg from "./assets/academy.png";
 import freshTopic2Img from "./assets/story.png";
@@ -17,6 +18,7 @@ import chaiWalaImg from "./assets/image3.png";
 
 import "./styles/App.scss";
 import "./styles/mediaQuery.scss";
+import { useEffect } from "react";
 
 
 const yellow = "#fff100", pink = "#ed1e79", red = "#d20120", white = "#fff", brown = "#6d3d0f";
@@ -33,6 +35,21 @@ function App() {
     album, 
     barat, 
     chaiwala} = data;
+
+    const dotCursor = (e) => {
+      const cursor  = document.querySelector('.cursor');
+      cursor.style.top = `${e.pageY - 14}px`;
+      cursor.style.left = `${e.pageX - 14}px`;
+    }
+
+    useEffect(() => {
+      window.addEventListener("mousemove", dotCursor);
+
+      return () => {
+        window.removeEventListener("mousemove", dotCursor);
+      }
+
+    }, []);
 
 
   return (
@@ -164,6 +181,7 @@ function App() {
 
     {/* Footer */}
     <Footer />
+    <Misc />
     </>
   );
 }
