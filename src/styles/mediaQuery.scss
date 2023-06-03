@@ -42,6 +42,7 @@
 }
 
 
+
 @media screen and (max-width: 500px) {
 
     .section {
@@ -56,8 +57,11 @@
         }
     }
 
+    
+
     footer {
         padding: 7rem 0;
+        
 
         h1 {
             font-size: 25px;
@@ -65,7 +69,6 @@
 
         div {
             padding: 0;
-            align-items: center;
         }
     }
 }

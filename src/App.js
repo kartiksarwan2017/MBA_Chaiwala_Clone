@@ -1,6 +1,3 @@
-import "./styles/mediaQuery.scss";
-import "./styles/App.scss";
-
 import data from "./data/data.json";
 
 import IntroVideo from "./components/IntroVideo/IntroVideo";
@@ -16,6 +13,11 @@ import coursesImg from "./assets/image2.png";
 import albumImg from "./assets/mba-cares.gif";
 import baratImg from "./assets/image1.png";
 import chaiWalaImg from "./assets/image3.png";
+
+
+import "./styles/App.scss";
+import "./styles/mediaQuery.scss";
+
 
 const yellow = "#fff100", pink = "#ed1e79", red = "#d20120", white = "#fff", brown = "#6d3d0f";
 
