@@ -13,7 +13,7 @@ const Misc = () => {
     <a href="/franchise" className="franchiseBtn" data-cursorpointer={true}>
        GET A FRANCHISE
     </a>
-    <BsMouse className="scrollBtn" />
+    <BsMouse className="scrollBtn" data-cursorpointer={true} />
     </>
   )
 }

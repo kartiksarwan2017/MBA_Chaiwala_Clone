@@ -1,5 +1,7 @@
 import React from 'react';
+import {motion} from "framer-motion";
 import "../../styles/section.scss";
+
 
 const Section = ({
   h3, 
@@ -14,6 +16,56 @@ const Section = ({
   btnBgColor, 
   btnColor
 }) => {
+
+  const headingOptions = {
+    initial: {
+      y: "-100%",
+      opacity: 0,
+    },
+    whileInView: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const textOptions = {
+    ...headingOptions,
+    transition: {
+      delay: 0.3,
+    }
+  };
+
+
+  const buttonOptions = {
+    initial: {
+      y: "100%",
+      opacity: 0,
+    },
+    whileInView: {
+      y: 0,
+      opacity: 1,
+    },
+    transition: {
+      delay: 0.3,
+      ease: "easeIn"
+    }
+  };
+
+
+  const imgOptions = {
+    initial: {
+      scale: 0.1,
+      opacity: 0,
+    },
+    whileInView: {
+      scale: 1,
+      opacity: 1,
+    },
+    transition: {
+      delay: 0.3
+    }
+  };
+
   return (
     <>
       <section 
@@ -23,34 +75,42 @@ const Section = ({
         }}
       >
         <div>
-            <h3 style={{
+          <motion.h3 
+            style={{
               color: headingColor
             }}
             data-cursorpointer={true}
-            >
+            {...headingOptions}
+          >
               {h3}
-            </h3>
+            </motion.h3>
 
-            <p style={{
-              color: textColor
-            }}
-            data-cursorpointer={true}>
+            <motion.p 
+              style={{
+                color: textColor
+              }}
+              data-cursorpointer={true}
+              {...textOptions}
+            >
               {text}
-            </p>
+            </motion.p>
 
             {
                hasBtn && 
                (
-                <button style={{
-                  color: btnColor,
-                  backgroundColor: btnBgColor
-                }}
-                data-cursorpointer={true}>
+                <motion.button 
+                  style={{
+                    color: btnColor,
+                    backgroundColor: btnBgColor
+                  }}
+                  data-cursorpointer={true}
+                  {...buttonOptions}
+                >
                   {btnTxt}
-                </button> 
+                </motion.button> 
                )}
 
-            <div>
+            <motion.div {...imgOptions}>
                 <img 
                   src={imgSrc} 
                   alt="imgSrc" 
@@ -58,7 +118,7 @@ const Section = ({
                     width: imgSize
                   }}
                 />
-            </div>
+            </motion.div>
         </div>
       </section>
     </>
