@@ -8,9 +8,9 @@ const Misc = () => {
     <>
     <div className='cursor'></div>
     <a href="/" className="logo">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="Logo" data-cursorpointer={true} />
     </a>
-    <a href="/franchise" className="franchiseBtn">
+    <a href="/franchise" className="franchiseBtn" data-cursorpointer={true}>
        GET A FRANCHISE
     </a>
     <BsMouse className="scrollBtn" />
